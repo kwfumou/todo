@@ -2,6 +2,7 @@
   <div>
     <h1>{{ msg }}</h1>
     <counter />
+    <counter />
   </div>
 </template>
 
@@ -10,10 +11,10 @@ import Counter from "./Counter.vue";
 export default {
   name: "HelloWorld",
   props: {
-    msg: String,
+    msg: String
   },
   components: {
-    Counter,
-  },
+    Counter
+  }
 };
 </script>
