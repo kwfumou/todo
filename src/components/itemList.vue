@@ -18,6 +18,7 @@
         <input type="number" v-model="newItemPrice" />
       </label>
       <button @click="addItem">add</button>
+      <button @click="Sort">sort</button>
     </div>
   </div>
 </template>
@@ -40,6 +41,11 @@ export default {
       this.items.push({
         name: this.newItemName,
         price: this.newItemPrice
+      });
+    },
+    Sort() {
+      this.items.sort(function(a, b) {
+        return b.price - a.price;
       });
     }
   }
