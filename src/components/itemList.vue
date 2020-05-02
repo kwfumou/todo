@@ -16,7 +16,7 @@
         価格
         <input type="number" v-model="newItemPrice" />
       </label>
-      <button @click="add">add</button>
+      <button @click="addItem">add</button>
     </div>
   </div>
 </template>
@@ -34,13 +34,13 @@ export default {
       newItemPrice: 0
     };
   },
-  computed: {
-    itemListMessage() {
-      return "名前" + this.price;
+  methods: {
+    addItem() {
+      this.items.push({
+        name: this.newItemName,
+        price: this.newItemPrice
+      });
     }
-  },
-  components: {}
+  }
 };
 </script>
-
-<style></style>

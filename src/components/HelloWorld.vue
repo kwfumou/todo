@@ -16,8 +16,8 @@ export default {
     msg: String
   },
   components: {
-    ItemList,
-    Counter
+    Counter,
+    ItemList
   }
 };
 </script>
